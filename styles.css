@@ -10,3 +10,22 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
+.world {
+    overflow: hidden;
+    position: relative;
+}
+
+.score {
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+}
+
+.start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%
+}
