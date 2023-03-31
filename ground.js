@@ -1,5 +1,10 @@
+import { incrementCustomProperty } from "./updateCustomProperty";
+
+const SPEED = 0.05;
 const groundElems = document.querySelectorAll("[data-ground]");
 
 export function updateGround(delta) {
-  groundElems.forEach((ground) => {});
+  groundElems.forEach((ground) => {
+    incrementCustomProperty(ground, "--left", delta * SPEED * -1);
+  });
 }
