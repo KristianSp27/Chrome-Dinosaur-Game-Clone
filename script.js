@@ -28,6 +28,11 @@ function update(time) {
 
 window.requestAnimationFrame(update);
 
+function handleStart() {
+  lastTime = null;
+  window.requestAnimationFrame(update);
+}
+
 function setPixelToWorldScale() {
   let worldToPixelScale;
   if (window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT) {
