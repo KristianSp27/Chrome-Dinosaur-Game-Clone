@@ -30,6 +30,7 @@ window.requestAnimationFrame(update);
 
 function handleStart() {
   lastTime = null;
+  setUpGround();
   window.requestAnimationFrame(update);
 }
 
