@@ -2,7 +2,7 @@ import { setUpGround, updateGround } from "./ground.js";
 
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
-const SPEED_SCALE_INCREASE = 0.0001;
+const SPEED_SCALE_INCREASE = 0.00001;
 
 const worldElem = document.querySelector("[data-world]");
 
@@ -14,6 +14,7 @@ setUpGround();
 
 let lastTime;
 let speedScale;
+let score;
 function update(time) {
   if ((lastTime = null)) {
     lastTime = time;
@@ -24,6 +25,7 @@ function update(time) {
 
   updateGround(delta, speedScale);
   updateSpeedScale(delta);
+  updateScore(delta);
 
   lastTime = time;
   window.requestAnimationFrame(update);
@@ -38,6 +40,7 @@ window.requestAnimationFrame(update);
 function handleStart() {
   lastTime = null;
   speedScale = 1;
+  score = 0;
   setUpGround();
   window.requestAnimationFrame(update);
 }
