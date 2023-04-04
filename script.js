@@ -12,6 +12,7 @@ document.addEventListener("keydown", handleStart, { once: true });
 setUpGround();
 
 let lastTime;
+let speedScale;
 function update(time) {
   if ((lastTime = null)) {
     lastTime = time;
@@ -30,6 +31,7 @@ window.requestAnimationFrame(update);
 
 function handleStart() {
   lastTime = null;
+  speedScale = 1;
   setUpGround();
   window.requestAnimationFrame(update);
 }
