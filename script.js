@@ -35,7 +35,10 @@ function updateSpeedScale(delta) {
   speedScale += delta * SPEED_SCALE_INCREASE;
 }
 
-window.requestAnimationFrame(update);
+function updateScore(delta) {
+  score += delta * 0.01;
+  scoreElem.textContent = Math.floor(score);
+}
 
 function handleStart() {
   lastTime = null;
