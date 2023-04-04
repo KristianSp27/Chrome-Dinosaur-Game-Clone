@@ -21,10 +21,15 @@ function update(time) {
   }
   const delta = time - lastTime;
 
-  updateGround(delta);
+  updateGround(delta, speedScale);
+  updateSpeedScale(delta);
 
   lastTime = time;
   window.requestAnimationFrame(update);
+}
+
+function updateSpeedScale(delta) {
+  speedScale += delta * SPEED_SCALE_INCREASE;
 }
 
 window.requestAnimationFrame(update);
