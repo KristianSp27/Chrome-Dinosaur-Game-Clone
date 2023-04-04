@@ -5,6 +5,7 @@ const WORLD_HEIGHT = 30;
 const SPEED_SCALE_INCREASE = 0.00001;
 
 const worldElem = document.querySelector("[data-world]");
+const scoreElem = document.querySelector("[data-score]");
 
 setPixelToWorldScale();
 window.addEventListener("resize", setPixelToWorldScale);
