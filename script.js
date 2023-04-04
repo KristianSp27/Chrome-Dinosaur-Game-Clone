@@ -2,7 +2,7 @@ import { setUpGround, updateGround } from "./ground.js";
 
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
-const SPEED_SCALE_INCREASE = 0.00001;
+const SPEED_SCALE_INCREASE = 0.0001;
 
 const worldElem = document.querySelector("[data-world]");
 
