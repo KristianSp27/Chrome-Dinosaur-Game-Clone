@@ -30,6 +30,7 @@ function update(time) {
 
   updateGround(delta, speedScale);
   updateSpeedScale(delta);
+  updateDino(delta, speedScale)
   updateScore(delta);
 
   lastTime = time;
@@ -50,6 +51,7 @@ function handleStart() {
   speedScale = 1;
   score = 0;
   setUpGround();
+  setUpDino();
   startScreenElem.classList.add("hide")
   window.requestAnimationFrame(update);
 }
