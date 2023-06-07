@@ -1,4 +1,6 @@
 import { setUpGround, updateGround } from "./ground.js";
+import { setUpGround, updateGround } from "./dino.js";
+
 
 const WORLD_WIDTH = 100;
 const WORLD_HEIGHT = 30;
