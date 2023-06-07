@@ -5,8 +5,10 @@ const DINO_FRAME_COUNT = 2;
 const FRAME_TIME = 100;
 
 let isJumping;
+let dinoFrame;
 export function setUpDino() {
   isJumping = false;
+  dinoFrame = 0;
 }
 
 export function updateDino(delta, speedScale) {
@@ -21,6 +23,7 @@ function handleRun(delta, speedScale) {
   }
 
   if (currentFrameTime > FRAME_TIME) {
+    dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT;
   }
   currentFrameTime += delta * speedScale;
 }
