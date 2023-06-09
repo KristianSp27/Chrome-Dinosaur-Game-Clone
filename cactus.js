@@ -10,5 +10,15 @@ export function setupCactus() {
 
 export function updateCactus() {
   if (nextCactusTime <= 0) {
+    createCactus();
+    nextCactusTime = randomNumberBetween(CACTUS_INTERVAL_MIN, CACTUS_INTERVAL_MAX) / speedScale;
   }
+  nextCactusTime -= delta;
 }
+
+function createCactus() {
+  const cactus = document.createElement("img");
+  cactus.dataset.cactus = true;
+}
+
+document.querySelectorAll("[data-cactus]");
