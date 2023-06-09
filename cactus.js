@@ -1,3 +1,5 @@
+import { setCustomProperty } from "./updateCustomProperty";
+
 const SPEED = 0.05;
 const CACTUS_INTERVAL_MIN = 500;
 const CACTUS_INTERVAL_MAX = 2000;
@@ -19,6 +21,10 @@ export function updateCactus() {
 function createCactus() {
   const cactus = document.createElement("img");
   cactus.dataset.cactus = true;
+  cactus.src = "imgs/cactus.png";
+  cactus.classList.add("cactus");
+  setCustomProperty(cactus, "--left", 100);
+  worldElem.append(cactus);
 }
 
 document.querySelectorAll("[data-cactus]");
