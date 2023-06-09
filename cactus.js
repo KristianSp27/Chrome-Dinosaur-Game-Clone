@@ -1,4 +1,4 @@
-import { setCustomProperty } from "./updateCustomProperty";
+import { setCustomProperty } from "./updateCustomProperty.js";
 
 const SPEED = 0.05;
 const CACTUS_INTERVAL_MIN = 500;
@@ -11,6 +11,8 @@ export function setupCactus() {
 }
 
 export function updateCactus() {
+  document.querySelectorAll("[data-cactus]");
+
   if (nextCactusTime <= 0) {
     createCactus();
     nextCactusTime = randomNumberBetween(CACTUS_INTERVAL_MIN, CACTUS_INTERVAL_MAX) / speedScale;
@@ -27,4 +29,6 @@ function createCactus() {
   worldElem.append(cactus);
 }
 
-document.querySelectorAll("[data-cactus]");
+function randomNumberBetween(min, max) {
+  Math.floor(Math.random() * (max - min + 1) + min);
+}
